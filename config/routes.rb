@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+  root 'welcome#home'
+
   namespace 'api' do
     namespace 'v1' do
-      root 'welcome#home'
       get 'welcome/account'
-      post 'accounts/auth'
+      get 'accounts/all'
     end
   end
 end
